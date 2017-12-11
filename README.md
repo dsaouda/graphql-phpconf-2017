@@ -4,11 +4,13 @@ Exemplos simples usados para fazer uma pequena demonostração de graphql no php
 
 # rodando
 
-execute em seu terminal ```php -S 0.0.0.0:8080```
+execute em seu terminal `php -S 0.0.0.0:8080`
 
-em um editor (você pode usar o [graphiql](https://github.com/graphql/graphiql)) coloque a url http://<host>/02-cep.php
+em um editor (você pode usar o [graphiql](https://github.com/graphql/graphiql)) informe a url `http://<host>/02-cep.php`
 
 # exemplos de querys
+
+Separei algumas querys que podem ser usadas
 
 ## query
 
