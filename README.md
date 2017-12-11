@@ -26,8 +26,6 @@ Separei algumas querys que podem ser usadas
 }
 ```
 
-======================================
-
 ## variable
 
 ```
@@ -47,7 +45,6 @@ query ($cep: String!){
 }
 ```
 
-======================================
 ## alias
 
 ```
@@ -71,7 +68,6 @@ query ($cep: String!){
 }
 
 ```
-======================================
 
 ## fragments
 
@@ -98,8 +94,6 @@ fragment detalhe on Endereco {
 
 ```
 
-======================================
-
 ## directives
 ```
 query ($cep: String!, $includeBairro: Boolean = true){
@@ -118,8 +112,6 @@ query ($cep: String!, $includeBairro: Boolean = true){
   "includeBairro": true
 }
 ```
-
-======================================
 
 ## mutation
 ```
