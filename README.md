@@ -1,4 +1,18 @@
-# query
+# graphql phpconf 2017
+
+Exemplos simples usados para fazer uma pequena demonostração de graphql no phpconf 2017
+
+# rodando
+
+execute em seu terminal ```php -S 0.0.0.0:8080```
+
+em um editor (você pode usar o [graphiql](https://github.com/graphql/graphiql)) coloque a url http://<host>/02-cep.php
+
+# exemplos de querys
+
+## query
+
+```
 {
   endereco(cep: "07083150") {
     logradouro 
@@ -8,10 +22,13 @@
     cep
   }  
 }
+```
 
 ======================================
 
-# variable
+## variable
+
+```
 query ($cep: String!){
   endereco(cep: $cep) {
     logradouro 
@@ -26,10 +43,12 @@ query ($cep: String!){
 {
   "cep": "07181100"
 }
+```
 
 ======================================
+## alias
 
-# alias
+```
 {
   e1: endereco(cep: "07083150") {
     logradouro 
@@ -49,9 +68,12 @@ query ($cep: String!){
   }  
 }
 
+```
 ======================================
 
-# fragments
+## fragments
+
+```
 {
   e1: endereco(cep: "07083150") {
     ...detalhe
@@ -72,9 +94,12 @@ fragment detalhe on Endereco {
   uf
 }
 
+```
+
 ======================================
 
-# directives
+## directives
+```
 query ($cep: String!, $includeBairro: Boolean = true){
   endereco(cep: $cep) {
     logradouro 
@@ -90,11 +115,13 @@ query ($cep: String!, $includeBairro: Boolean = true){
   "cep": "07181100",
   "includeBairro": true
 }
+```
 
 ======================================
 
-#mutation
-
+## mutation
+```
 mutation {
   removerCache(cep: "06020190")
 }
+```
